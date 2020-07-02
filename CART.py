@@ -140,8 +140,12 @@ print(life_history)
 print(k_1)
 def column(matrix, i):
     return [row[i] for row in matrix]
-plt.plot(column(life_history,3),column(life_history,0),'b',column(life_history,1),'r',column(life_history,2),'g')
+
+plt.plot(column(life_history,3),column(life_history,0),'b')
+plt.plot(column(life_history,3),column(life_history,1),'r')
+plt.plot(column(life_history,3),column(life_history,2),'g')
 plt.show()
+
 def ode_system(t, z):
     E, T, C=z
     return [p*C/(g+T)-d_1*E-k_1*E*T+(k_n1+k_2)*C, #check the value of s
