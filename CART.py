@@ -153,7 +153,7 @@ def ode_system(t, z):
             k_1*E*T-(k_n1+k_2+k_3)*C,
             ]
 
-sol=solve_ivp(ode_system, [1,100],[2500,5*2500,0])
+sol=solve_ivp(ode_system, [0,2],[2500,5*2500,0])
 plt.plot(sol.t, sol.y[0],'b', sol.t, sol.y[1],'r', sol.t, sol.y[2],'g')
          # consider not use log
 plt.show()
